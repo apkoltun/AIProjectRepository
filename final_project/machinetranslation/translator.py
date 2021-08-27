@@ -9,11 +9,12 @@ load_dotenv()
 apikey = os.environ['apikey']
 url = os.environ['url']
 
+
 def english_to_french(english_text):
     '''Function translates from English to French'''
     if english_text is None:
         return ""
-    #write the code here
+    #Code based off a previous course I took with Coursera
     authenticator = IAMAuthenticator(apikey)
     language_translator = LanguageTranslatorV3(version='2018-05-01',authenticator=authenticator)
     language_translator.set_service_url(url)
@@ -29,7 +30,7 @@ def french_to_english(french_text):
     '''Function translates from French to English'''
     if french_text is None:
         return ""
-    #write the code here
+    #Code based off a previous course I took with Coursera
     authenticator = IAMAuthenticator(apikey)
     language_translator = LanguageTranslatorV3(version='2018-05-01',authenticator=authenticator)
     language_translator.set_service_url(url)
